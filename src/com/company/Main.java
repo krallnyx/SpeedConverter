@@ -20,10 +20,11 @@ public class Main {
     }
 
     public static void printConversion(double kilometersPerHour) {
-        if (kilometersPerHour < 0) {
+        double mih = toMilesPerHour(kilometersPerHour);
+        if (mih < 0) {
             System.out.println("Invalid Value");
         } else {
-            System.out.println(kilometersPerHour + " km/h = " + (Math.round(kilometersPerHour / 1.609)) + " mi/h");
+            System.out.println(kilometersPerHour + " km/h = " + mih + " mi/h");
         }
     }
 }
